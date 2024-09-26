@@ -1,0 +1,513 @@
+
+<!DOCTYPE html>
+
+<html><head>
+<title>Di Wang</title>
+
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+
+<style type="text/css">
+ @import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,600,600italic");
+
+
+	body
+	{
+	font-family:"Roboto",Helvetica,Arial,sans-serif;font-size:16px;line-height:1.5;font-weight:300;
+    	background-color : #CDCDCD;
+	}
+    	.content
+	{
+    		width : 900px;
+    		padding : 25px 30px;
+    		margin : 25px auto;
+    		background-color : #fff;
+    		box-shadow: 0px 0px 10px #999;
+    		border-radius: 15px; 
+	}	
+	table
+	{
+		padding: 5px;
+	}
+	
+	table.pub_table,td.pub_td1,td.pub_td2
+	{
+		padding: 8px;
+		width: 850px;
+        border-collapse: separate;
+        border-spacing: 15px;
+        margin-top: -5px;
+	}
+
+	td.pub_td1
+	{
+		width:50px;
+	}
+    td.pub_td1 img
+    {
+        height:120px;
+        width: 160px;
+    }
+	
+	div#container
+	{
+		margin-left: auto;
+		margin-right: auto;
+		width: 820px;
+		text-align: left;
+		position: relative;
+		background-color: #FFF;
+	}
+	div#DocInfo
+	{
+		color: #1367a7;
+		height: 158px;
+	}
+	h4,h3,h2,h1
+	{
+		color: #3B3B3B;
+	}
+	h2
+	{
+		font-size:130%;
+	}
+	p
+	{
+		color: #5B5B5B;
+		margin-bottom: 50px;
+	}
+	p.caption
+	{
+		color: #9B9B9B;
+		text-align: left;
+		width: 600px;
+	}
+	p.caption2
+	{
+		color: #9B9B9B;
+		text-align: left;
+		width: 800px;
+	}
+	#header_img
+	{
+		position: absolute;
+		top: 0px; right: 0px;
+    }
+	a:link,a:visited
+	{
+		color: #1367a7;
+		text-decoration: none;
+	}
+
+    #mit_logo {
+        position: absolute;
+        left: 646px;
+        top: 14px;
+        width: 200px;
+        height: 20px;
+    }
+   
+    table.pub_table tr {
+        outline: thin dotted #666666;
+    }
+    .papericon {
+        border-radius: 8px; 
+        -moz-box-shadow: 3px 3px 6px #888;
+        -webkit-box-shadow: 3px 3px 6px #888;
+        box-shadow: 3px 3px 6px #888;
+        width: 180px;
+	margin-top:5px;
+	margin-left:5px;
+	margin-bottom:5px;
+    }
+
+     .papericon_blank {
+
+        width: 160px;
+	margin-top:5px;
+	margin-left:5px;
+	margin-bottom:5px;
+    }
+
+    .media {
+	outline: thin dotted #666666;
+ 	margin-bottom: 15px;	
+	margin-left:10px;
+    }
+    .media-body {
+	margin-top:5px;
+	padding-left:20px;
+    }
+
+.papers-selected h5, .papers-selected h4 { display : none; }
+.papers-selected .publication { display : none; }
+.paperhi-only { display : none; }
+.papers-selected .paperhi { display : flex; }
+.papers-selected .paperlo { display : none; }
+
+.hidden>div {
+	display:none;
+}
+
+.visible>div {
+	display:block;
+}
+</style>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23931362-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23931362-2');
+</script>
+
+<script type="text/javascript">
+    var myPix = new Array("img/wd2.jpg")
+    function choosePic() {
+        var randomNum = Math.floor(Math.random() * myPix.length);
+        document.getElementById("myPicture").src = myPix[randomNum];
+    };
+</script>
+
+<script>
+$(document).ready(function() {
+  $('.paperlo button').click(function() {
+     $('.papers-container').addClass('papers-selected');
+  });
+  $('.paperhi button').click(function() {
+     $('.papers-container').removeClass('papers-selected');
+  });
+
+
+	$('.text_container').addClass("hidden");
+
+	$('.text_container').click(function() {
+		var $this = $(this);
+
+		if ($this.hasClass("hidden")) {
+			$(this).removeClass("hidden").addClass("visible");
+			$(this).removeClass("papericon");
+		} else {
+			$(this).removeClass("visible").addClass("hidden");
+		}
+	});
+
+
+});
+</script>
+
+</head>
+
+
+<body>
+<div class="content">
+	<div id="container">
+
+	<table>
+	<tbody><tr>
+	<td><img id="myPicture" src="xxx" style="float:left; padding-right:20px" height="200px"></td>
+	<script>choosePic();</script>
+	<td>
+	<div id="DocInfo">
+		<h1>Di Wang (王迪)</h1>
+        Ph.D. Candidate<br>
+		School of Software Technology, Dalian University of Technology<br>
+		Office: Information building B-48 <br>
+        Email: diwang1211@mail.dlut.edu.cn<br>
+<!--        <a href="TH_CV.pdf" target="_blank" rel="external">CV</a> &bull; <a href="https://scholar.google.com/citations?hl=zh-CN&user=DZXShkoAAAAJ" target="_blank" rel="external">Google Scholar</a> &bull; <a href="https://github.com/CSer-Tang-hao" target="_blank" rel="external">Github</a> &bull; <a href="https://www.zhihu.com/people/0564sxth-70" target="_blank" rel="external">Zhihu</a><br>-->
+	</div><br>
+    <!--
+    <div id="mit_logo">
+        <a href="http://www.mit.edu"><img src="image/mit.gif" height="170px" class="papericon" /></a>
+    </div>
+    -->
+	</td>
+	</tr>
+	</tbody></table>
+	<br>
+
+
+	<h2><b>About Me</b></h2>
+        <p style="text-align:justify";>
+<!--        I am a Ph.D. student at <a href="https://imag-njust.net">Intelligent Media Analysis Group (IMAG)</a> supervised by Prof. <a href="https://imag-njust.net/jinhui-tang">Jinhui Tang</a>. During Dec. 2018 - Dec. 2019, I worked as a Research Intern at <a href="http://www.noahlab.com.hk/">HUAWEI NOAH'S ARK LAB</a>, supervised by Prof. <a href="https://scholar.google.com/citations?user=61b6eYkAAAAJ&hl=en">Qi Tian</a> (IEEE Fellow). Now, I am working closely with <a href="http://lingxixie.com/Home.html">Lingxi Xie</a> and <a href="https://imag-njust.net/xiangboshu">Xiangbo Shu</a>. My research mainly focuses on visual reasoning and its applications in action understanding. In particular, I am interested in group activity recognition, compositional action recognition, and action localization/detection.-->
+    		I'm Di Wang, currently a 4th-year Ph.D. Candidate at Dalian University of Technology in <a href="http://ssdut.dlut.edu.cn/" target="_blank" rel="external">
+				DUT MEDIA LAB</a>,
+			supervised by Prof. <a href="http://dutmedia.org/xin-fan/" target="_blank" rel="external">Xin Fan</a> and worked closely with Prof. <a href="http://dutmedia.org/rsliu/" target="_blank" rel="external">Risheng Liu</a>.
+		 Before that, I received my Master degree in Computer Science from the Nanjing University of Science and Technology (NJUST) in 2021, under the supervision of Prof. <a href="https://jspan.github.io/" target="_blank" rel="external">Jinshan Pan</a> and Prof. <a href="https://imag-njust.net/jinhui-tang/" target="_blank" rel="external">Jinhui Tang</a>.	
+		My researches mainly focus on Deep Learning and its applications in Image Restoration and Enhancement.
+		</p>
+
+	<h2><b>Education</b></h2>
+
+	<div>
+        <strong> Dalian University Technology, China (Sep. 2021 - Now) </strong>
+          <a href="http://ssdut.dlut.edu.cn/" target="_blank" rel="external">
+            <img border="0" src="img/dlut_logo.jfif" align="right" width="80" height="80" />
+          </a>
+        <ul>
+        <li>
+          Doctor of philosophy (Ph. D.), Software Engineering</li>
+        <li>
+          Advisor: Prof. <a href="http://dutmedia.org/xin-fan/" target="_blank" rel="external">Xin Fan</a></li>
+        </ul>
+	</div>
+
+	<div>
+        <strong> Nanjing University of Science and Technology, China (Sep. 2018 - Apr. 2021) </strong>
+          <a href="http://www.njust.edu.cn/" target="_blank" rel="external">
+            <img border="0" src="img/njust_logo.jpg" align="right" width="80" height="80" />
+          </a>
+        <ul>
+        <li>
+          Master of philosophy (M.S.), Computer Science</li>
+        <li>
+          Advisor: Prof. <a href="https://jspan.github.io/" target="_blank" rel="external">Jinshan Pan</a></li>
+        </ul>
+	</div>
+
+	<div>
+        <strong> Liaoning Normal University, China (Sep. 2014 - Jun. 2018) </strong>
+          <a href="http://www.lnnu.edu.cn/" target="_blank" rel="external">
+            <img border="0" src="img/lnnu_logo.jpg" align="right" width="80" height="80" />
+          </a>
+        <ul>
+        <li>
+          Bachelor of Engineering (B.E.), Digital Media Technology</li>
+        <li>
+          Graduated with Excellent Thesis Award</li>
+        </ul>
+	</div>
+
+    <h2><b>News</b></h2>
+    <ul>
+<!--    	<li>2020.08.17: One paper is accepted by China MM 2020 and recommended to be published on Multimedia System.</li>-->
+<!--    	<li>2020.08.05: I achieve the Chinese Government Scholarship and will work with Prof. Wanli Ouyang at The University of Sydney in the next two years.</li>-->
+
+		<li>2024.09: <a href="https://github.com/wdhudiekou/IRFS">IRFS</a> is selected as an <strong style="color:#ff0000">ESI Highly Cited Paper</strong> !</li>
+		<li>2024.07: One paper about image deraindrop is accepted to IEEE TIM (JCR Q1) !</li>
+		<li>2024.06: One paper about cross-modality image registration-fusion is accepted to IEEE TCSVT (JCR Q1) !</li>
+		<li>2023.06: We received the honorary title of "Academic New Star" in the 2023 IJCAI YES Conference !</li>
+		<li>2023.05: One paper about cross-modality image fusion accepted to Information Fusion (JCR Q1) !</li>
+		<li>2022.09: One paper about image deraining is accepted to JCST (JCR Q2) !</li>
+		<li>2022.04: One paper about cross-modality image fusion is accepted to IJCAI'22 !</li>
+		<li>2022.02: One paper about underwater image enhancement is accepted to IEEE ICRA'22 !</li>
+		<li>2021.11: One paper about image denoising is accepted to Journal of Software !</li>
+   		<li>2021.03: One paper about image deraining is accepted to IEEE ICME'21 !</li>
+
+<!--		<li>2020.11: One invention patent (ZL201710795957.3) has been duly authorized !</li>-->
+<!--		<li>2020.08: One paper about FSL is accepted to ACM Multimedia'20 !</li>-->
+    </ul>
+
+    <h2><b>Research Interests</b></h2>
+	<ul>
+		<li> Computer Vision: Image Restoration, Underwater Image Enhancement, Multimodal Image Registration and Fusion  </li>
+	</ul>
+
+
+
+<!--<div class="papers-container papers-selected"> -->
+<!--	<h5 class="paperlo">All Publications<button type="button" class="ml-3 btn btn-light"> Show selected</button></h5>-->
+<!--	<h5 class="paperhi paperhi-only">Selected Publications<button type="button" class="ml-3 btn btn-light"> Show all</button></h5>-->
+<!--	<h5 class="pt-2 pb-1">2020</h5>	-->
+
+
+<!--	<div class="publication media paperhi">-->
+<!--           <img src="img/SAM.png" height="100" width="200" class="papericon">-->
+<!--           <div class="media-body"><b>Social Adaptive Module for Weakly-supervised-->
+<!--Group Activity Recognition</b><br>-->
+<!--           <b>Rui Yan</b>, Lingxi Xie, Jinhui Tang, Xiangbo Shu, and Qi Tian<br>-->
+<!--           ECCV 2020 (accepted). <strong style="color:red">The dataset has been published. See the Preject page for more details.</strong><br>-->
+<!--           [<a href="https://arxiv.org/pdf/2007.09470">PDF</a>][<a href="SAM.html">Project</a>][<a href="https://github.com/ruiyan1995/Weakly-supervised-Group-Activiy-Recognition">Code</a>]-->
+<!--	</div></div>-->
+
+<!--	<div class="publication media paperhi">-->
+<!--           <img src="img/HiGCIN.png" height="100" width="200" class="papericon">-->
+<!--           <div class="media-body"><b>HiGCIN: Hierarchical Graph-based Cross-->
+<!--Inference Network for Group Activity Recognition</b><br>-->
+<!--           <b>Rui Yan</b>, Lingxi Xie, Jinhui Tang, Xiangbo Shu, and Qi Tian<br>-->
+<!--           Under review, 2020<br>-->
+<!--           [<a href="xxx">PDF</a>]-->
+<!--	</div></div>-->
+
+<!--	-->
+<!--	<div class="publication media paperhi">-->
+<!--           <img src="img/SRM.png" height="100" width="200" class="papericon">-->
+<!--           <div class="media-body"><b>Storyboard Region Relationship Model for-->
+<!--Group Activity Recognition</b><br>-->
+<!--           Boning Li, Xiangbo Shu, <b>Rui Yan</b>, and Jinhui Tang<br>-->
+<!--           Under review, 2020<br>-->
+<!--           [<a href="xxx">PDF</a>]-->
+<!--	</div></div>-->
+
+
+<!--	<div class="publication media paperhi">-->
+<!--           <img src="img/CCGL.png" height="100" width="200" class="papericon">-->
+<!--           <div class="media-body"><b>Coherence Constrained Graph LSTM for Group Activity Recognition</b><br>-->
+<!--           Jinhui Tang, Xiangbo Shu, <b>Rui Yan</b>, and Liyan Zhang<br>-->
+<!--           IEEE T-PAMI, 2019<br>-->
+<!--           [<a href="xxx">PDF</a>]-->
+<!--	</div></div>-->
+
+<!--	<div class="publication media paperhi">-->
+<!--           <img src="img/PC-TDM.jpg" height="100" width="200" class="papericon">-->
+<!--           <div class="media-body"><b>Participation-Contributed Temporal Dynamic Model for Group Activity Recognition</b><br>-->
+<!--           <b>Rui Yan</b>, Jinhui Tang, Xiangbo Shu, Zechao Li and Qi Tian<br>-->
+<!--           ACM MM 2018 (Oral) ~8.5% <br>-->
+<!--           [<a href="https://www.researchgate.net/profile/Rui_Yan31/publication/328372578_Participation-Contributed_Temporal_Dynamic_Model_for_Group_Activity_Recognition/links/5bed27684585150b2bb79e69/Participation-Contributed-Temporal-Dynamic-Model-for-Group-Activity-Recognition.pdf">PDF</a>][<a href="https://github.com/ruiyan1995/Group-Activity-Recognition">Code</a>][<a href="https://github.com/ruiyan1995/ruiyan1995.github.io/raw/master/mm2018_korea.pptx">Slides</a>]-->
+<!--	</div></div>-->
+
+<!--	-->
+
+<!--	<div class="publication media paperhi">-->
+<!--           <img src="img/Skip-Attention.jpg" height="100" width="200" class="papericon">-->
+<!--           <div class="media-body"><b>Skip-Attention Encoder-Decoder Framework for Human Motion Prediction</b><br>-->
+<!--           Ruipeng Zhang, Xiangbo Shu, <b>Rui Yan</b>, Jiachao Zhang and Yan Song<br>-->
+<!--           China MM, 2020<br>-->
+<!--           [<a href="">PDF</a>]-->
+<!--	</div></div>-->
+
+<!--	<div class="publication media paperhi">-->
+<!--           <img src="img/none.jpeg" height="100" width="200" class="papericon">-->
+<!--           <div class="media-body"><b>A Feature Selection Method for Projection Twin Support Vector Machine</b><br>-->
+<!--           <b>Rui Yan</b>, Qiaolin Ye, Liyan Zhang, Ning Ye and Xiangbo Shu<br>-->
+<!--           Neural Processing Letters, 2016<br>-->
+<!--           [<a href="https://www.researchgate.net/profile/Rui_Yan31/publication/317769500_A_Feature_Selection_Method_for_Projection_Twin_Support_Vector_Machine/links/59b1370d458515a5b4890247/A-Feature-Selection-Method-for-Projection-Twin-Support-Vector-Machine.pdf">PDF</a>]-->
+<!--	</div></div>-->
+
+
+
+<div class="papers-container papers-selected">
+<!-- 	<h5 class="paperlo">All Publications<button type="button" class="ml-3 btn btn-light"> Show selected</button></h5> -->
+	<h2 class="paperhi paperhi-only"><b>Publications</b></h2>
+
+	<h5 class="pt-2 pb-1">2021</h5>
+
+	<div class="publication media paperhi">
+
+		   <img src="img/IMF.png" height="120" width="200" class="papericon">
+           <div class="media-body">
+			   <b>Improving Misaligned Multi-modality Image Fusion with One-stage Progressive Dense Registration</b><br>
+           <strong><b>Di Wang</b></strong>, Jinyuan Liu, Long Ma, Risheng Liu, and Xin Fan* <br/>
+			   IEEE TCSVT (JCR Q1) <br/>
+           [<a href="https://ieeexplore.ieee.org/document/10553339">PDF</a>][<a href="https://github.com/wdhudiekou/IMF">Code</a>]
+		   </div>
+	</div>
+
+	<div class="publication media paperhi">
+
+		   <img src="img/IRFS.png" height="120" width="200" class="papericon">
+           <div class="media-body">
+			   <b>An Interactively Reinforced Paradigm for Joint Infrared-Visible Image Fusion and Saliency Object Detection</b><br>
+           <strong><b>Di Wang</b></strong>, Jinyuan Liu, Risheng Liu, and Xin Fan* <br/>
+			   Information Fusion (IF, JCR Q1) <br/>
+           [<a href="https://authors.elsevier.com/c/1h5xy5a7-GtU1c">PDF</a>][<a href="https://github.com/wdhudiekou/IRFS">Code</a>]
+		   <img src="./img/award1.jpeg" style="height: 18px;"> <font size="-1"><strong style="color:#ff0000">ESI Highly Cited Paper</strong></font>
+		   </div>
+	</div>
+
+	<div class="publication media paperhi">
+
+		   <img src="img/JCST.png" height="120" width="200" class="papericon">
+           <div class="media-body">
+			   <b>Single Image Deraining Using Residual Channel Attention Networks</b><br>
+           <strong><b>Di Wang</b></strong>, Jinshan Pan*, and Jinhui Tang <br/>
+			   Journal of Computer Science and Technology (JCST, JCR Q2) <br/>
+           [<a href="https://jcst.ict.ac.cn/fileup/1000-9000/PDF/JCST-2023-2-15-0979-439.pdf">PDF</a>][<a href=" ">Code</a>]
+		   </div>
+	</div>
+
+	<div class="publication media paperhi">
+
+		   <img src="img/ijcai.png" height="120" width="200" class="papericon">
+           <div class="media-body">
+			   <b>Unsupervised Misaligned Infrared and Visible Image Fusion via Cross-Modality Image Generation and Registration</b><br>
+           <strong><b>Di Wang</b></strong>, Jinyuan Liu, Xin Fan, and Risheng Liu* <br/>
+			   IJCAI 2022 (CCF-A, Oral Presentation, Acceptance Rate ≤ 3.75%) <br/>
+           [<a href="https://arxiv.org/pdf/2205.11876.pdf">PDF</a>][<a href="https://github.com/wdhudiekou/UMF-CMGR">Code</a>]
+		   </div>
+	</div>
+
+	<div class="publication media paperhi">
+
+		   <img src="img/ICRA.jpg" height="120" width="200" class="papericon">
+           <div class="media-body">
+			   <b>Semantic-aware Texture-Structure Feature Collaboration for Underwater Image Enhancement</b><br>
+           <strong><b>Di Wang</b></strong>, Long Ma, Risheng Liu, and Xin Fan* <br/>
+           IEEE ICRA (CCF-B), 2022 <br/>
+           [<a href=" ">PDF</a>][<a href="https://github.com/wdhudiekou/STSC">Code</a>]
+		   </div>
+	</div>
+
+	<div class="publication media paperhi">
+
+		   <img src="img/JOS.bmp" height="120" width="200" class="papericon">
+           <div class="media-body">
+			   <b>Two-scale Real Image Blind Denoising with Self-supervised Constraints</b><br>
+           <strong><b>Di Wang</b></strong>, Jinshan Pan, and Jinhui Tang <br/>
+           Journal of Software (CCF-A), 2021 <br/>
+           [<a href="http://www.jos.org.cn/jos/article/pdf/6512">PDF</a>][<a href=" ">Code</a>]
+		   </div>
+	</div>
+	
+	<div class="publication media paperhi">
+           <img src="img/MTCRN.png" height="120" width="200" class="papericon">
+           <div class="media-body">
+			   <b>Learning a Tree-Structured Channel-Wise Refinement Network for Efficient Image Deraining</b><br>
+			   <strong><b>Di Wang</b></strong>*, Hao Tang*, Jinshan Pan, and Jinhui Tang <br/>
+           IEEE ICME (CCF-B), 2021 <br/>
+           [<a href="https://ieeexplore.ieee.org/abstract/document/9428187/">PDF</a>][<a href="https://github.com/CSer-Tang-hao/TCRN-Deraining">Code</a>]
+		   </div>
+
+	</div>
+
+
+</div>
+
+
+</div>
+    <h2><b>Honors</b></h2>
+	<div>
+        <ul>
+			<li>Outstanding Ph.D. Dissertation Individual Scholarship of Dalian University of Technology, 2024</li>
+			<li>The honorary title of "Outstanding Graduate Student" of Dalian University of Technology, 2023</li>
+			<li>First Prize Scholarship of Dalian University of Technology, 2023</li>
+			<li>The honorary title of "Academic New Star" in the IJCAI YES 2023</li>
+			<li>Excellent Master's Thesis of Jiangsu Province, 2022</li>
+			<li>Second Prize Scholarship of Dalian University of Technology, 2022</li>
+			<li>Excellent Master's Thesis of Nanjing University of Science and Technology, 2022</li>
+			<li>Thrid Prize Scholarship of Nanjing University of Science and Technology, 2020</li>
+			<li>Second Prize Scholarship of Nanjing University of Science and Technology, 2019</li>
+	    	<li>First Prize Scholarship of Nanjing University of Science and Technology, 2018</li>
+        </ul>    
+	</div>
+
+	<h2><b>Professional Services</b></h2>
+	<div>
+		<ul>
+			<li> Journal Reviewer:  </li>
+			<b>IEEE Transactions on Neural Networks and Learning Systems (T-NNLS)</b><br>
+			<b>IEEE Transactions on Circuits and Systems for Video Technology (T-CSVT)</b><br>
+			<b>Information Fusion (IF)</b><br>
+			<b>Pattern Recognition (PR)</b><br>
+			<b>Knowledge-Based Systems (KBS)</b><br>
+			<b>The Visual Computer (TVC)</b><br>
+			<b>Image and Vision Computing (IVC)</b><br>
+			<li> Conference Reviewer:  </li>
+			<b>Association for the Advancement of Artificial Intelligence (AAAI): 2024 </b><br>
+			<b>ACM International Conference on Multimedia (ACM MM): 2023-2024 </b><br>
+		</ul>
+	</div>
+
+<!--	<h2><b>Cooperation & Communication</b></h2>-->
+<!--		<ul>-->
+<!--			<li> NJUST: <a href="https://CSer-Tang-hao.github.io/" target="_blank" rel="external">Hao Tang</a> </li>-->
+
+<!--			<li> DUT:  <a >Long Ma, Jinyuan Liu</a></li>-->
+<!--			<li> XJTU:  <a href="https://cvhw.github.io/hao-wei/" target="_blank" rel="external">Hao Wei</a></li>-->
+<!--		</ul>-->
+</div>
+
+</body></html>
