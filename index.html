@@ -1,7 +1,8 @@
 
 <!DOCTYPE html>
 
-<html><head>
+<html lang="en"><head>
+<meta charset="UTF-8">
 <title>Weifeng Liu</title>
 
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -9,12 +10,13 @@
 <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
 
 <style type="text/css">
- @import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,600,600italic");
+
 
 
 	body
 	{
-	font-family:"Roboto",Helvetica,Arial,sans-serif;font-size:16px;line-height:1.5;font-weight:300;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", sans-serif;
+        font-size: 16px; line-height: 1.65; font-weight: 400;
     	background-color : #CDCDCD;
 	}
     	.content
@@ -66,16 +68,21 @@
 	}
 	h4,h3,h2,h1
 	{
-		color: #3B3B3B;
+		color: #30363d;
+        font-weight: 650;
+        line-height: 1.3;
 	}
+    h1 { font-size: 2rem; letter-spacing: -0.025em; }
 	h2
 	{
-		font-size:130%;
+		font-size: 1.3rem;
+        margin-top: 1.5rem;
+        margin-bottom: 0.75rem;
 	}
 	p
 	{
-		color: #5B5B5B;
-		margin-bottom: 50px;
+		color: #454c54;
+		margin-bottom: 2rem;
 	}
 	p.caption
 	{
@@ -131,14 +138,34 @@
     }
 
     .media {
-	outline: thin dotted #666666;
- 	margin-bottom: 15px;	
-	margin-left:10px;
+        outline: thin dotted #666666;
+        margin: 0 0 10px 10px;
+    }
+    .publication.media {
+        min-height: 130px;
+        align-items: center;
+    }
+    .publication .papericon {
+        width: 180px;
+        height: 120px;
+        flex: 0 0 180px;
+        object-fit: contain;
+        background: white;
+    }
+    .new-paper-image {
+        height: 120px;
+        object-fit: contain;
+        background: white;
+        flex: 0 0 180px;
     }
     .media-body {
-	margin-top:5px;
-	padding-left:20px;
+        margin-top: 5px;
+        padding: 2px 12px 6px 16px;
+        line-height: 1.45;
+        color: #454c54;
     }
+    .media-body b { color: #30363d; font-weight: 650; }
+    .media-body small { color: #68727e; }
 
 .papers-selected h5, .papers-selected h4 { display : none; }
 .papers-selected .publication { display : none; }
@@ -165,7 +192,7 @@
 </script>
 
 <script type="text/javascript">
-    var myPix = new Array("images/lwf.jpg")
+    var myPix = new Array("images/profile-2026.png")
     function choosePic() {
         var randomNum = Math.floor(Math.random() * myPix.length);
         document.getElementById("myPicture").src = myPix[randomNum];
@@ -208,7 +235,7 @@ $(document).ready(function() {
 
 	<table>
 	<tbody><tr>
-	<td><img id="myPicture" src="xxx" style="float:left; padding-right:20px" height="200px"></td>
+	<td><img id="myPicture" src="images/profile-2026.png" alt="Portrait of Weifeng Liu" style="float:left; padding-right:20px" height="200"></td>
 	<script>choosePic();</script>
 	<td>
 	<div id="DocInfo">
@@ -232,13 +259,13 @@ $(document).ready(function() {
 
 	<h2><b>About Me</b></h2>
         <p style="text-align:justify";>
-			I am Weifeng Liu, currently a first-year Ph.D. student at Faculty of Medicine, Dalian University of Technology and Department of Cardiology, General Hospital of Northern Theater Command, supervised by Prof. <a href="https://faculty.dlut.edu.cn/qupeng777/zh_CN/index/1145501/list/index.htm" target="_blank" rel="external">Peng Qu</a> and Academician Yaling Han. Previously, I obtained my bachelor's degree in Computer Science and Technology from Beijing University of Civil Engineering and Architecture in 2021, supervised by Assoc. Prof. <a href="https://scholar.google.com/citations?hl=zh-CN&user=vTeFA0sAAAAJ" target="_blank" rel="external">Dong Sui</a>. In 2024, I obtained my master's degree in Intelligent Manufacturing Technology from eijing University of Civil Engineering and Architecture in 2021, supervised by Assoc. Prof. <a href="https://scholar.google.com/citations?hl=zh-CN&user=vTeFA0sAAAAJ" target="_blank" rel="external">Dong Sui</a> and Prof. <a href="https://dxxy.bucea.edu.cn/szdw/js1/110484.htm" target="_blank" rel="external">Maozu Guo</a>. During Feb. 2024 - Sep. 2024, I worked as a research intern at the Life Simulation Research Center of the Beijing Academy of Artificial Intelligence, supervised by Prof. <a href="https://scholar.google.com/citations?user=m2Q6lyoAAAAJ&hl=zh-CN&oi=ao" target="_blank" rel="external">Henggui Zhang</a> and <a href="https://scholar.google.com/citations?hl=zh-CN&user=WA0FSnsAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="external">Yacong Li</a>. My previous research mainly focused on the application of computer vision in medical image analysis (including segmentation and multi-modal diagnosis), and my current research direction is the application of artificial intelligence (especially deep learning) in the diagnosis and treatment of cardiovascular diseases.
+			I am Weifeng Liu, currently a Ph.D. candidate at Faculty of Medicine, Dalian University of Technology and Department of Cardiology, General Hospital of Northern Theater Command, supervised by Prof. <a href="https://faculty.dlut.edu.cn/qupeng777/zh_CN/index/1145501/list/index.htm" target="_blank" rel="external">Peng Qu</a> and Academician Yaling Han. Previously, I obtained my bachelor's degree in Computer Science and Technology from Beijing University of Civil Engineering and Architecture in 2021, supervised by Assoc. Prof. <a href="https://scholar.google.com/citations?hl=zh-CN&user=vTeFA0sAAAAJ" target="_blank" rel="external">Dong Sui</a>. In 2024, I obtained my master's degree in Intelligent Manufacturing Technology from Beijing University of Civil Engineering and Architecture, supervised by Assoc. Prof. <a href="https://scholar.google.com/citations?hl=zh-CN&user=vTeFA0sAAAAJ" target="_blank" rel="external">Dong Sui</a> and Prof. <a href="https://dxxy.bucea.edu.cn/szdw/js1/110484.htm" target="_blank" rel="external">Maozu Guo</a>. During Feb. 2024 - Sep. 2024, I worked as a research intern at the Life Simulation Research Center of the Beijing Academy of Artificial Intelligence, supervised by Prof. <a href="https://scholar.google.com/citations?user=m2Q6lyoAAAAJ&hl=zh-CN&oi=ao" target="_blank" rel="external">Henggui Zhang</a> and <a href="https://scholar.google.com/citations?hl=zh-CN&user=WA0FSnsAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="external">Yacong Li</a>. My previous research mainly focused on the application of computer vision in medical image analysis (including segmentation and multi-modal diagnosis), and my current research direction is the application of artificial intelligence (especially deep learning) in the diagnosis and treatment of cardiovascular diseases.
 		</p>
 
 	<h2><b>Education</b></h2>
 
 	<div>
-        <strong> Dalian University Technology, Liaoning, China (Sep. 2024 - Now) </strong>
+        <strong> Dalian University of Technology, Liaoning, China (Sep. 2024 - Now) </strong>
           <a href="https://www.dlut.edu.cn/" target="_blank" rel="external">
             <img border="0" src="images/DUT.jpg" align="right" width="80" height="80" />
           </a>
@@ -251,9 +278,9 @@ $(document).ready(function() {
 	</div>
 	<div style="display: flex; align-items: center; justify-content: space-between;">
 		<div>
-			<strong> Beijing University of Civil Engineering and Architecture, Beijing, China (Sep. 2021 - Apr. 2024) </strong>
+			<strong> Beijing University of Civil Engineering and Architecture, Beijing, China (Sep. 2021 - Jul. 2024) </strong>
 			<ul>
-				<li>Master of philosophy (M.S.), Intelligent Manufacturing Technology</li>
+				<li>Master&#39;s degree, Intelligent Manufacturing Technology</li>
 				<li>Advisor: Assoc. Prof. <a href="https://scholar.google.com/citations?hl=zh-CN&user=vTeFA0sAAAAJ" target="_blank" rel="external">Dong Sui</a> and Prof. <a href="https://dxxy.bucea.edu.cn/szdw/js1/110484.htm" target="_blank" rel="external">Maozu Guo</a></li>
 				<li>Graduated with Excellent Thesis Award</li>
 				<li>Beijing Outstanding Graduate</li>
@@ -265,7 +292,7 @@ $(document).ready(function() {
 	</div>
 	<div style="display: flex; align-items: center; justify-content: space-between;">
 		<div>
-			<strong> Beijing University of Civil Engineering and Architecture, Beijing, China (Sep. 2017 - Apr. 2021) </strong>
+			<strong> Beijing University of Civil Engineering and Architecture, Beijing, China (Sep. 2017 - Jul. 2021) </strong>
 			<ul>
 				<li>Bachelor of Engineering (B.E.), Computer Science and Technology</li>
 				<li>Advisor: Assoc. Prof. <a href="https://scholar.google.com/citations?hl=zh-CN&user=vTeFA0sAAAAJ" target="_blank" rel="external">Dong Sui</a></li>
@@ -293,36 +320,36 @@ $(document).ready(function() {
         </ul>
 	</div>
 
-    <h2><b>News</b></h2>
-    <ul>
-		<!-- <li>2024.09: <a href="https://github.com/wdhudiekou/IRFS">IRFS</a> is selected as an <strong style="color:#ff0000">ESI Highly Cited Paper</strong> !</li>
-		<li>2024.07: One paper about image deraindrop is accepted to IEEE TIM (JCR Q1) !</li>
-		<li>2024.06: One paper about cross-modality image registration-fusion is accepted to IEEE TCSVT (JCR Q1) !</li>
-		<li>2023.06: We received the honorary title of "Academic New Star" in the 2023 IJCAI YES Conference !</li>
-		<li>2023.05: One paper about cross-modality image fusion accepted to Information Fusion (JCR Q1) !</li>
-		<li>2022.09: One paper about image deraining is accepted to JCST (JCR Q2) !</li>
-		<li>2022.04: One paper about cross-modality image fusion is accepted to IJCAI'22 !</li>
-		<li>2022.02: One paper about underwater image enhancement is accepted to IEEE ICRA'22 !</li>
-		<li>2021.11: One paper about image denoising is accepted to Journal of Software !</li>
-   		<li>2021.03: One paper about image deraining is accepted to IEEE ICME'21 !</li> -->
-
-<!--		<li>2020.11: One invention patent (ZL201710795957.3) has been duly authorized !</li>-->
-<!--		<li>2020.08: One paper about FSL is accepted to ACM Multimedia'20 !</li>-->
-    </ul>
-
-    <h2><b>Research Interests</b></h2>
-	<ul>
-		<li> Deep Learning in Cardiovascular Diseases: diseases diagnosis, medical image segmentation, multi-modal data fusion   </li>
-	</ul>
-
-
-
-
-
-
 <div class="papers-container papers-selected">
 <!-- 	<h5 class="paperlo">All Publications<button type="button" class="ml-3 btn btn-light"> Show selected</button></h5> -->
 	<h2 class="paperhi paperhi-only"><b>Publications</b></h2>
+
+	<div class="publication media paperhi">
+        <img src="images/ecg-representation-2026.png" height="120" width="180" class="papericon new-paper-image" alt="Report-aligned ECG representation learning framework">
+        <div class="media-body">
+            <b>Report-Aligned and Measurement-Aware Pretraining for Transferable ECG Image Representation Learning</b><br>
+            <strong>Weifeng Liu</strong><sup>†</sup>, Yacong Li<sup>†</sup>, Miaohan Qiu, Zizhao Qi, Jing Li, Peng Qu, Yi Li, Yaling Han<br>
+            IEEE BIBM (CCF-B, 2026), Regular Paper, accepted<br>
+            <small>† Equal contribution</small>
+        </div>
+    </div>
+    <div class="publication media paperhi">
+        <img src="images/corodino-fuse-2026.png" height="120" width="180" class="papericon new-paper-image" alt="CoroDINO-Fuse coronary artery segmentation framework">
+        <div class="media-body">
+            <b>CoroDINO-Fuse: DINO-Guided Semantic–Local Fusion with Vessel-Aware Enhancement for Coronary Artery Segmentation in Coronary CTA</b><br>
+            <strong>Weifeng Liu</strong><sup>†</sup>, Yacong Li<sup>†</sup>, Miaohan Qiu, Zizhao Qi, Jing Li, Peng Qu, Yi Li, Yaling Han<br>
+            IEEE BIBM (CCF-B, 2026), Regular Paper, accepted<br>
+            <small>† Equal contribution</small>
+        </div>
+    </div>
+    <div class="publication media paperhi">
+        <img src="images/cardiovascular-age-2026.png" height="120" width="180" class="papericon new-paper-image" alt="心血管年龄差与临床结局风险的限制性立方样条分析">
+        <div class="media-body">
+            <b>基于大语言模型的急性冠脉综合征患者心血管年龄预测及预后价值分析</b><br>
+            <strong>刘伟峰</strong>，段一璇，祁子钊，王可心，裘淼涵，李晶，李毅，韩雅玲<br>
+            中华心血管病杂志，2026，54(2)：157–164 &nbsp;·&nbsp; <a href="https://doi.org/10.3760/cma.j.cn112148-20251127-00831">Paper</a>
+        </div>
+    </div>
 
 	<h5 class="pt-2 pb-1">2021</h5>
 	<div class="publication media paperhi">
@@ -331,8 +358,7 @@ $(document).ready(function() {
 		<div class="media-body">
 			<b>A Novel Effectiveness Assessment Framework for Neoadjuvant Chemoradiotherapy of Locally Advanced Rectal Cancer Based on Multi-modal Intelligence</b><br>
 		Xiao Tian, Dong Sui, <strong><b>Weifeng Liu</b></strong>, Maozu Guo, Gongning Luo, Kuanquan Wang<br/>
-			IEEE BIBM (CCF-B) <br/>
-		[<a href="https://ieeexplore.ieee.org/abstract/document/10506212">Paper</a>]
+			IEEE BIBM (CCF-B, 2023)  &nbsp;·&nbsp; <a href="https://ieeexplore.ieee.org/abstract/document/10506212">Paper</a>
 		</div>
  	</div>
 
@@ -342,8 +368,7 @@ $(document).ready(function() {
 		<div class="media-body">
 		<b>ColonNet: A novel polyp segmentation framework based on LK-RFB and GPPD</b><br>
 		Dong Sui, <strong><b>Weifeng Liu</b></strong>, Yue Zhang, Yang Li, Gongning Luo, Kuanquan Wang, Maozu Guo<br/>
-		Computers in Biology and Medicine (JCR Q1) <br/>
-		[<a href="https://www.sciencedirect.com/science/article/pii/S0010482523010065">Paper</a>][<a href="https://github.com/WFLiu0327/ColonNet">Code</a>]</div>
+		Computers in Biology and Medicine (JCR Q1)  &nbsp;·&nbsp; <a href="https://www.sciencedirect.com/science/article/pii/S0010482523010065">Paper</a></div>
 	</div>
 
 	<div class="publication media paperhi">
@@ -352,8 +377,7 @@ $(document).ready(function() {
 		<div class="media-body">
 			<b>Flexible ConvNext Block Based Multi-task Learning Framework for Liver MRI Images Analysis</b><br>
 			Dong Sui, <strong><b>Weifeng Liu</b></strong>, Maozu Guo, Yang Li, Lei Zhang, Gongning Luo, Kuanquan Wang<br/>
-			IEEE BIBM (CCF-B) <br/>
-		[<a href="https://ieeexplore.ieee.org/abstract/document/9994956">Paper</a>]
+			IEEE BIBM (CCF-B, 2022)  &nbsp;·&nbsp; <a href="https://ieeexplore.ieee.org/abstract/document/9994956">Paper</a>
 		</div>
 	</div>
 
@@ -364,8 +388,7 @@ $(document).ready(function() {
  		<div class="media-body">
 	 		<b>A pyramid architecture‐based deep learning framework for breast cancer detection</b><br>
  			Dong Sui, <strong><b>Weifeng Liu</b></strong>, Jing Chen, Chunxiao Zhao, Xiaoxuan Ma, Maozu Guo, Zhaofeng Tian<br/>
- 			BioMed Research International (JCR Q3) <br/>
- 			[<a href="https://onlinelibrary.wiley.com/doi/full/10.1155/2021/2567202">Paper</a>]
+			BioMed Research International (JCR Q3)  &nbsp;·&nbsp; <a href="https://onlinelibrary.wiley.com/doi/full/10.1155/2021/2567202">Paper</a>
  		</div>
  	</div>
 
@@ -398,19 +421,19 @@ $(document).ready(function() {
         </ul>    
 	</div> 
 
-	<h2><b>Professional Services</b></h2>
-	<div>
-		<ul>
-			<li> Journal Reviewer:  </li>
-			<b>International Journal of Intelligent Systems</b><br>
-			<!-- <b>Advances in Civil Engineering </b><br>
-			<b>Anesthesiology Research and Practice </b><br>
-			<b>Oxidative Medicine and Cellular Longevity</b><br> -->
-			<li> Conference Reviewer:  </li>
-			<b>International Conference on Medical Image Computing and Computer Assisted Intervention (MICCAI): 2023 </b><br>
-			
-		</ul>
-	</div>
+    <h2><b>Professional Services</b></h2>
+    <div>
+        <ul>
+            <li><strong>Journal Reviewer:</strong><br>
+                International Journal of Intelligent Systems<br>
+                IET Signal Processing
+            </li>
+            <li><strong>Conference Reviewer:</strong><br>
+                International Conference on Medical Image Computing and Computer Assisted Intervention (MICCAI): 2023<br>
+                IEEE International Conference on Bioinformatics and Biomedicine (BIBM): 2026
+            </li>
+        </ul>
+    </div>
 
 <!--	<h2><b>Cooperation & Communication</b></h2>-->
 <!--		<ul>-->
